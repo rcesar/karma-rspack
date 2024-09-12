@@ -1,4 +1,4 @@
-const KW_Preprocessor = require('../../../lib/karma-webpack/preprocessor');
+const KW_Preprocessor = require('../../../lib/karma-rspack/preprocessor');
 
 describe('KW_Preprocessor', () => {
   it('should be defined', () => {

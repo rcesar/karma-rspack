@@ -1,8 +1,8 @@
-const DefaultWebpackOptionsFactory = require('../../../lib/webpack/defaults');
+const DefaultRspackOptionsFactory = require('../../../lib/rspack/defaults');
 
-describe('DefaultWebpackOptionsFactory', () => {
+describe('DefaultRspackOptionsFactory', () => {
   it('should be defined', () => {
-    expect(DefaultWebpackOptionsFactory).toBeDefined();
-    // todo(mikol): write a DefaultWebpackOptionsFactory test suite before v5 official release.
+    expect(DefaultRspackOptionsFactory).toBeDefined();
+    // todo(mikol): write a DefaultRspackOptionsFactory test suite before v5 official release.
   });
 });

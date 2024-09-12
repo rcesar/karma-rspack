@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const KW_Framework = require('../../../lib/karma-webpack/framework');
+const KW_Framework = require('../../../lib/karma-rspack/framework');
 
 jest.mock('fs');
 
 describe('KW_Framework', () => {
   test('Defaults', () => {
     const controller = { outputPath: 'foo/' };
-    const config = { files: [], __karmaWebpackController: controller };
+    const config = { files: [], __karmaRspackController: controller };
     fs.closeSync = jest.fn();
     fs.openSync = jest.fn();
 

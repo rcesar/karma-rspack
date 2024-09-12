@@ -10,29 +10,29 @@ process.env.CHROME_BIN = require('puppeteer').executablePath();
 
 const path = require('path');
 
-const karmaWebpack = require('../../../../lib/index');
+const karmaRspack = require('../../../../lib/index');
 
 // The karma server integration tests take longer than the jest 5 sec default,
 // we will give them 30 seconds to complete.
 const KARMA_SERVER_TIMEOUT = 30 * 1000;
 
-describe('A basic karma-webpack setup', () => {
+describe('A basic karma-rspack setup', () => {
   let scenario;
 
   const TEST_PATH = path.resolve(__dirname, './index.scenario.js');
 
   const config = {
-    frameworks: ['mocha', 'chai', 'webpack'],
+    frameworks: ['mocha', 'chai', 'rspack'],
     files: [{ pattern: TEST_PATH }],
-    preprocessors: { [TEST_PATH]: ['webpack'] },
-    webpack: {
+    preprocessors: { [TEST_PATH]: ['rspack'] },
+    rspack: {
       devtool: false,
       entry: './test.js',
     },
     browsers: ['ChromeHeadless'],
     // Explicitly turn off reporters so the simulated test results are not confused with the actual results.
     reporters: [],
-    plugins: [karmaWebpack, karmaChromeLauncher, karmaMocha, karmaChai],
+    plugins: [karmaRspack, karmaChromeLauncher, karmaMocha, karmaChai],
     port: 2389,
     logLevel: 'ERROR',
     singleRun: true
@@ -49,7 +49,7 @@ describe('A basic karma-webpack setup', () => {
       .finally(() => done());
   }, KARMA_SERVER_TIMEOUT);
 
-  // karma-webpack should ignore the entry option and throw a warning.
+  // karma-rspack should ignore the entry option and throw a warning.
 
   it('should have an exit code of 1 because it contains a failing test', () => {
     expect(scenario.exitCode).toBe(1);
@@ -69,7 +69,7 @@ describe('A basic karma-webpack setup', () => {
 
   it('should call console.warn with the appropriate error', () => {
     expect(console.warn).toHaveBeenCalledWith(`
-karma-webpack does not currently support custom entries, if this is something you need,
+karma-rspack does not currently support custom entries, if this is something you need,
 consider opening an issue.
 ignoring attempt to set the entry option...
       `)
