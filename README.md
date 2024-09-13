@@ -1,6 +1,3 @@
-[![npm][npm]][npm-url]
-[![node][node]][node-url]
-
 <div align="center">
   <a href='https://github.com/karma-runner/karma'>
     <img width="180" height="180"
