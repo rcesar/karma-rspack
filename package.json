@@ -1,12 +1,12 @@
 {
-  "name": "karma-rspack",
-  "version": "5.0.1",
+  "name": "karma-rspack-2",
+  "version": "5.0.2",
   "description": "Use rspack with karma",
   "license": "MIT",
   "repository": "rspack-contrib/karma-rspack",
-  "author": "Tobias Koppers @sokra",
-  "homepage": "https://github.com/rspack-contrib/karma-rspack",
-  "bugs": "https://github.com/rspack-contrib/karma-rspack/issues",
+  "author": "Renan Cesar @rcesar",
+  "homepage": "https://github.com/rcesar/karma-rspack",
+  "bugs": "https://github.com/rcesar/karma-rspack/issues",
   "main": "lib",
   "engines": {
     "node": ">= 18"
